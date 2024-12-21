@@ -1,0 +1,11 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-header-cell {
+    font-weight: bold;
+  }
+  
+  .mat-elevation-z8 {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }

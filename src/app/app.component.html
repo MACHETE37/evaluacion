@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <span>Test</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/paises" routerLinkActive="active-link">Paises</a>
+      <a mat-list-item routerLink="/clientes" routerLinkActive="active-link">Clientes</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

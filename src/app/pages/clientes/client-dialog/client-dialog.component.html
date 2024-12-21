@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Nuevo Cliente</h1>
+<div mat-dialog-content>
+  <form [formGroup]="clientForm">
+    <mat-form-field appearance="fill">
+      <mat-label>País</mat-label>
+      <mat-select formControlName="Pais">
+        <mat-option *ngFor="let pais of paises()" [value]="pais.Paises_ID">
+          {{ pais.Nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput [formControl]="txtNombre" formControlName="Nombre" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Teléfono</mat-label>
+      <input matInput [formControl]="txtTelefono" formControlName="Telefono" [value]="clientForm.get('Telefono')?.value | telefonoFormato" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Cancelar</button>
+  <button mat-button color="primary" (click)="save()">Guardar</button>
+</div>

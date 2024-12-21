@@ -1,0 +1,11 @@
+.example-container {
+    height: 100vh;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+  }
+  
+  mat-sidenav-content .content {
+    padding: 16px;
+  }

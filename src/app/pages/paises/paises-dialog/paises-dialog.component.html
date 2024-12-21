@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Nuevo Cliente</h1>
+<div mat-dialog-content>
+  <form [formGroup]="paisesForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput [formControl]="txtNombre" formControlName="Nombre" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Cancelar</button>
+  <button mat-button color="primary" (click)="save()">Guardar</button>
+</div>
